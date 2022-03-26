@@ -1,0 +1,947 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&family=Syne+Mono&display=swap');
+
+:root{
+    --fs-h1: 3rem; 
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    --mar-right: auto
+}
+
+@media (min-width: 800px) {
+    :root{
+        --fs-h1: 4.5rem; 
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;   
+        --mar-right: 500px     
+    }
+}
+
+body{
+    background-color: lavender;
+    margin-top: 0;
+    font-family: "Smooch Sans","sans-serif";
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: cornflowerblue;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: aliceblue;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin: 0;
+}
+h1{ font-size: var(--fs-h1);}
+h2{ font-size: var(--fs-h2);
+    font-weight: 500px;}
+h3{ font-size: var(--fs-h3);}
+
+section{
+    padding: 5em, 2em;
+}
+
+.nav .nav-list li a{
+    text-decoration: none;
+    color: rgb(237, 235, 238);
+    font-size: 18px;
+    margin-left: 25px;
+    font-weight: 500;
+    padding-top: 10%;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.nav .nav-list li a{
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav{
+    /*background: rgb(20, 207, 145);*/
+    width: 100%;
+    position: fixed;
+    padding: 50px, 0 ;
+    transition: all 0.3s ease;
+    z-index: 999;
+
+
+
+}
+
+.logo a{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 3em;
+    font-weight: bold;
+
+}
+
+.nav-list{
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+
+}
+.nav-item{
+    display: inline-block;
+}
+
+.nav .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.intro{
+
+    display: flex;
+    height: 100vh;
+    color: aliceblue;
+    min-height: 500px;
+    margin-top: 0;
+    margin-bottom: auto;
+
+}
+
+.bigboi{
+    background: url("portfolio-background-header.jpg") no-repeat center;
+    background-size: cover;
+
+
+}
+
+.intro .max-width{
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto
+    ;
+    
+}
+
+.intro .home-content .text1{
+    font-size: var(--fs-h2);
+    text-align: center;
+   
+}
+
+.intro .home-content .text2{
+    font-size: var(--fs-h1);
+    text-align: center;
+    color: aquamarine;
+   
+}
+
+.intro .home-content .text3{
+    font-size: var(--fs-h2);
+    text-align: center;
+  
+}
+
+.nav .nav-list li a:hover{
+    color: black;
+}
+
+.nav .nav-list li a{
+    transition: color 0.3s ease;
+}
+
+.nav.sticky{
+    padding: 15px 0;
+    background: cornflowerblue;
+}
+
+.menu-btn{
+    color: aliceblue;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 800px){
+    .max-width{
+        padding: 0 10px;
+       
+    }
+
+    .educationn .max-width .edu-content .card{
+        width: 100%;
+        background: rgb(105, 176, 179);
+        text-align: center;
+        border-radius: 10px;
+        padding: 20px 25px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        margin-bottom: 10%;
+    }    
+
+
+
+    .about .about-content .col-left,
+    .about .about-content .col-right{
+    width: 50%;
+}
+
+    .about .about-content .col-left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .col-left img{
+        border-radius: 10px;
+        width: 400px;
+        height: 500px;
+    }
+
+    .about .about-content .col-right{
+        flex: 100%;
+    }
+
+    #h{
+        display: none;
+    } 
+
+    section .title::after{
+        display: none;
+    }
+
+    section .title::before{
+        display: none;
+    }
+
+    section .max-width .title{
+        border-bottom: 1px solid black;
+        padding: 1px;
+    }
+
+    .educationn .max-width .title,
+    .social .max-width .title{
+        border-bottom: 1px solid aliceblue;
+        padding: 1px;
+    }
+
+
+
+
+
+    
+    .nav .nav-list{
+        position: fixed;
+        background: cornflowerblue;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 10px;
+        transition: all 0.3s ease;
+    }
+
+
+
+    .nav .nav-list.active {
+        left: 0;
+    }
+
+    .nav .nav-list .nav-item{
+        display: block;
+    }
+
+    .nav .max-width .nav-list .nav-item a{
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 1000;
+    }
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+
+    .intro .max-width .home-content a{
+        margin-right: 100px;
+        padding: 6px 18px;
+    }
+
+    .about .max-width .title{
+        text-align: center;
+    }
+
+
+}
+
+.intro .home-content .projbtn{
+    color: aliceblue;
+    background-color: cornflowerblue;
+    display: inline-block;
+    padding: 12px 36px;
+    font-size: var(--fs-h3);
+    text-align: center;
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 20px;
+    align-self: center;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+.intro .home-content a:hover{
+    background: none;
+}
+
+.me{
+    height: 500px;
+    width: 400px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+section .title{
+    text-align: center;
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+/*section .title::before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: black;
+    transform: translate(0, -50%);
+    transform: translateY(70px);
+
+}
+
+section .title::after{
+    position: absolute;
+    color: cornflowerblue;
+    left: 47%;
+    padding: 5px; 
+    background: lavender;
+    font-size: 20px;
+    transform: translate(2, -50%);
+    transform: translateY(58px); 
+} */
+
+.about .title::after{
+    content: "who i am";
+}
+
+ section{
+     padding: 100px 0;
+}
+
+.cv-download{
+    color: aliceblue;
+}
+
+.about .about-content,
+.educationn .edu-content,
+.social .social-content,
+.skills .skills-content,
+.myproj{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .col-left{
+    width: 45%;
+}
+
+.about .about-content .col-right{
+    width: 55%;
+}
+.about .about-content .col-right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .col-right .text span{
+    color: cornflowerblue;
+}
+
+.about .about-content .col-right p{
+    text-align: justify;
+    font-weight: 300;
+}
+
+.about .about-content .col-right a{
+    color: aliceblue;
+    background-color: cornflowerblue;
+    font-weight: 1000;
+    display: inline-block;
+    padding: 1px 30px;
+    font-size: var(--fs-h3);
+    margin-top: 20px;
+    text-align: justify;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .col-right a:hover{
+    color: cornflowerblue;
+    background: none;
+}
+
+
+
+@media (max-width: 1104px ){
+    .about .max-width .about-content .col-left  .me{
+        height: 400px;
+        width: 350px;
+
+    }
+    
+}
+
+.educationn .max-width .title::after{
+    content: "my studies";
+    background-color: cadetblue;
+    color: aquamarine;
+
+
+}
+
+.educationn .max-width .title::before,
+.social .max-width .title::before{
+    background-color: aliceblue;
+}
+
+
+.educationn,
+.social{
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+
+
+.educationn .edu-content .card{
+    width: calc(50% - 20px);
+    background: rgb(105, 176, 179);
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.educationn .edu-content .card i{
+    color: aquamarine;
+    font-size: 35px;
+}
+
+.educationn .edu-content .card .text{
+    font-size: 25px;
+    font-weight: 1000;
+    margin: 10px 0 7px 0;
+}
+
+.educationn .edu-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.educationn .edu-content .card .box:hover{
+    transform: scale(1.05);
+}
+
+/*.skills .title::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: black;
+ 
+
+
+} */
+
+.skills .title::after{
+    content: "what i've learnt";
+
+
+} 
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+
+}
+
+section .title::after{
+    position: absolute;
+    color: cornflowerblue;
+    bottom: -12px;
+    left: 50%;
+    padding: 5px; 
+    background: lavender;
+    font-size: 20px;
+    transform: translateX(-50%);
+}
+
+.about .max-width .title::after{
+    content: "who i am";
+}
+
+.social .title::after{
+    content: "contact me";
+    background-color: cadetblue;
+    color: aquamarine;
+}
+
+.social .social-content .col-left,
+.social .social-content .col-right{
+    width: calc(50% - 30px);
+}
+
+.social .social-content .text{
+    font-size: 30px;
+    font-weight: 1000;
+    margin-bottom: 10px;
+}
+
+.social .social-content .col-left .icons{
+    margin: 10px 0;
+}
+
+.social .social-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.social .social-content .row .info{
+    margin-left: 30px;
+
+}
+
+.social .social-content .row i{
+    font-size: 25px;
+}
+
+.social .social-content .info .head{
+    font-weight: 800;
+}
+
+#lol{
+    margin-left: 35px;
+}
+
+ .social .col-right form .fields{
+     display: flex;
+ }
+
+ .social .col-right form .fields .field,
+ .social .col-right form .field{
+     height: 45px;
+     width: 100%;
+     margin-bottom: 15px;
+ }
+
+ .social .col-right form .field input,
+ .social .col-right form .textarea textarea{
+     height: 100%;
+     width: 100%;
+     border: 1px solid lightgray;
+     border-radius: 6px;
+     padding: 0 15px;
+     outline: none;
+     font-size: 17px;
+     font-family: "Smooch Sans", "sans serif";
+ }
+
+ .social .col-right form .name{
+     margin-right: 10px;
+ }
+
+ .social .col-right form .email{
+     margin-left: 10px;
+ }
+
+
+.social .col-right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+
+.social .col-right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+.social .col-right form .button{
+    height: 47px;
+    width: 170px;
+}
+
+.social .col-right form .button button{
+    width: 100%;
+    height: 100%;
+    font-family: "Smooch Sans", "sans serif";
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: cornflowerblue;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.social .col-right form .button button:hover{
+    background: none;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 947px){
+
+    .myproj .max-width .popo{
+        font-size: 20px;
+        font-weight: 600;
+        color: cornflowerblue;
+        margin-left: 8%;
+    }
+    
+    .social .social-content .col-left,
+    .social .social-content .col-right{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .social .social-content .col-left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .social .social-content .col-left .text{
+        display: none;
+    }
+
+    .social .social-content .col-left .icons::before{
+        content: "My Details";
+        font-size: 30px;
+        font-weight: 1000;
+        text-align: center;
+       /* margin-bottom: 10px; */
+    }
+
+    .skills .skills-content .skills-bar{
+        width: 500px;
+        background: #fff;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 25px 30px;
+    }
+
+}
+
+.media{
+    text-align: center;
+    margin-top: 10%;    
+}
+
+.media-list{
+    list-style: none;
+    display: inline-block;
+}
+
+.media-list li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.media-list i{
+    color: aliceblue;
+}
+
+.media-list li a i:hover{
+    color: black;
+}
+
+.media-list li a i{
+    transition: color 0.3s ease;
+}
+
+footer{
+    background-color: black;
+    padding: 20px;
+    color: aliceblue;
+}
+footer a{
+    color: aliceblue;
+}
+
+.skills{
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+.skills-bar{
+    width: 600px;
+    background: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 25px 30px;
+}
+
+.skills-bar .bar{
+    margin: 20px 0;
+}
+
+.skills-bar .bar .info{
+    margin-bottom: 5px;
+}
+
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+
+.skills-bar .bar .info span{
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.skills-bar .bar .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #f0f0f0;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+                      0px 1px 1px rgba(0, 0, 0, 0.05);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards; 
+
+}
+
+.skills-bar .bar .progress-line .work{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    transform: scaleX(1);
+    transform-origin: left;
+    background: #f0f0f0;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+                      0px 1px 1px rgba(0, 0, 0, 0.05);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+} 
+
+@keyframes nothing{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 0%;
+    }
+  }
+
+.bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: aquamarine;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.progress-line.html span{
+    width: 60%;
+    
+}
+
+.progress-line.python span{
+    width: 75%;
+}
+
+.progress-line.css span{
+    width: 45%;
+}
+
+.progress-line.java span{
+    width: 25%;
+}
+
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-top-color: #000;
+}
+
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    background: #000;
+    font-weight: 600;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+    100%{
+        opacity: 1;
+    }
+}
+
+.progress-line.html span::after{
+    content: "60%";
+}
+
+.progress-line.python span::after{
+    content: "75%";
+}
+
+.progress-line.css span::after{
+    content: "45%";
+}
+
+.progress-line.java span::after{
+    content: "25%";
+}
+
+@media (max-width: 900px) {
+    .skills .skills-content .skills-bar{
+        width: 400px;
+        background: #fff;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 20px 25px;
+    }
+
+    .skills .max-width .skills-content .skills-bar .bar .info{
+        margin-bottom: 30px;
+    }
+
+    
+}
+
+.myproj{
+    height: 200%;
+}
+
+.popo{
+    font-size: 30px;
+    font-weight: bold;
+    color: cornflowerblue;
+    margin-left: 12%;
+}
+
+.skills-bar .bar .info span:hover{
+    color: cornflowerblue;
+    font-size: 30px;
+    
+}
+
+.skills-bar .bar .info span{
+    transition: all 0.3s ease;
+}
+
+
+
